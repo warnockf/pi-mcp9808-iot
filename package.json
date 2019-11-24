@@ -1,28 +1,31 @@
 {
-    "name": "temp-sensor",
-    "version": "0.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start": "npx babel-node src/index.js",
-        "build": "npx babel src --out-dir lib",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@babel/polyfill": "^7.7.0",
-        "aws-iot-device-sdk": "^2.2.1",
-        "core-js": "^3.4.1",
-        "dotenv": "^8.2.0",
-        "raspi": "^4.0.0",
-        "raspi-i2c": "^5.0.4"
-    },
-    "devDependencies": {
-        "@babel/cli": "^7.7.0",
-        "@babel/core": "^7.7.2",
-        "@babel/node": "^7.7.0",
-        "@babel/preset-env": "^7.7.1",
-        "eslint": "^6.7.0"
-    }
+  "name": "temp-sensor",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx babel-node src/index.js",
+    "build": "npx babel src --out-dir lib",
+    "dev": "npx nodemon --exec babel-node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "aws-iot-device-sdk": "^2.2.1",
+    "core-js": "^3.4.1",
+    "dotenv": "^8.2.0",
+    "raspi": "^4.0.0",
+    "raspi-i2c": "^5.0.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "eslint": "^6.7.0",
+    "eslint-config-google": "^0.14.0",
+    "nodemon": "^2.0.1"
+  }
 }
