@@ -9,7 +9,7 @@ const SENSOR_REGISTER = 0x05;
 
 const initAsync = () => new Promise((resolve, reject) => {
   raspi.init(() => {
-    i2c.write(SENSOR_ADDRESS, CONFIG_REGISTER, Buffer.alloc(2), () => {
+    i2c.write(SENSOR_ADDRESS, SENSOR_REGISTER, Buffer.alloc(2), () => { // Why does writing to SENSOR_REGISTER work?
       setTimeout(() => {
         resolve();
       }, 500);

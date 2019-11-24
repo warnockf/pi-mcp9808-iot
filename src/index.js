@@ -1,13 +1,13 @@
 import DotEnv from 'dotenv';
 
 import TemperatureSensorService from './service/temperatureSensor';
-import MqttService from './service/mqtt';
+import MqttService from './service/mqtt'
 
 DotEnv.config();
 
 const onInterval = async (temperatureSensorService, mqttService) => {
   const temp = await temperatureSensorService.getTemp();
-  console.log(`temperature: ${temp}`);
+  //console.log(`temperature: ${temp}`);
   mqttService.publish(process.env.MQTT_TOPIC, {'temperature': temp});
 };
 
